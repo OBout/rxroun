@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { Router } from '@angular/router';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { UsersListComponent } from './users-list.component';
 import { UserService } from '../user.service';
@@ -14,7 +15,7 @@ describe('UsersListComponent', () => {
   let router: Router;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, HttpClientTestingModule],
       declarations: [UsersListComponent],
       providers: [UserService]
     }).compileComponents();

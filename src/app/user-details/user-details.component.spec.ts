@@ -5,6 +5,7 @@ import { of } from 'rxjs';
 import { UserDetailsComponent } from './user-details.component';
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('UserDetailsComponent', () => {
   let component: UserDetailsComponent;
@@ -13,6 +14,7 @@ describe('UserDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [UserDetailsComponent],
       providers: [
         UserService,
