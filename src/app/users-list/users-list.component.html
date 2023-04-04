@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let user of users" (click)="goToUserDetails(user.id)">
+      {{ user?.name }}
+    </li>
+  </ul>
+  
